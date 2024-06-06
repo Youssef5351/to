@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section-bg-white {
+  background-color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.aside-image-container {
+  position: relative;
+  height: 100%;
+  order: last;
+}
+
+@media (min-width: 1024px) {
+  .aside-image-container {
+    grid-column: span 5;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .aside-image-container {
+    grid-column: span 6;
+  }
+}
+
+.aside-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    grid-column: span 7;
+    padding: 4rem 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-content {
+    grid-column: span 6;
+  }
+}
+
+.content-container {
+  max-width: 20rem;
+  max-height: 100vh;
+  overflow-y: auto; 
+  margin-top: -215px;
+}
+
+@media (min-width: 1024px) {
+  .content-container {
+    max-width: 48rem;
+    margin-top: -215px;
+  }
+}
+
+.home-link {
+  display: block;
+  color: #3b82f6;
+}
+
+
+.welcome-title {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  direction: rtl;
+}
+
+@media (min-width: 640px) {
+  .welcome-title {
+    font-size: 1.875rem;
+
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome-title {
+    font-size: 2.25rem;
+
+  }
+}
+.welcome-title::after {
+content: '';
+position: absolute;
+width: 14.3%;
+height: 0px;
+padding-bottom: 24%;
+right: 2%;
+background: url(https://images.hitpaw.net/landing-pages/photo-enhancer/path.svg);
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.welcome-description {
+  margin-top: 1rem;
+  line-height: 1.75;
+  color: #6b7280;
+  direction: rtl;
+  font-family: "Tajawal";
+}
+
+.form-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  grid-column: span 6;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .input-group {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.input-group-full {
+  grid-column: span 6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input-label {
+  font-family: "Tajawal";
+  font-weight: 300;
+  direction: rtl;
+  cursor: auto;
+  font-size: 1.10rem;
+  position: absolute;
+  color: rgb(116, 116, 116);
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+  transform-origin: top left;
+}
+
+.input-label.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Prevent pointer events on hidden labels */
+}
+
+.ico {
+  color:#e0d332  /*#38caef*/;
+  font-size: 17px;
+  margin-left: 17px;
+  transform: translateX(-5px);
+  transition: all 0.2s ease; 
+}
+
+.input-field {
+  margin-top: 0.25rem;
+  width: 100%;
+  font-family: "Tajawal";
+  padding: 22px 0px;
+  padding-left: 110px; 
+  border: none;
+  border-bottom: 1px solid #868686;
+  background-color: white;
+  font-size: 1.10rem;
+  height: 40px;
+  color: #374151;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  direction: rtl;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease ,border-color 0.2s, padding-top 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  overflow: hidden;
+  border-bottom: 1px solid;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-color: #4985e0;
+  border-image: linear-gradient(to right, #3ab0ff, #38caef);
+  border-image-slice: 1;
+}
+.input-field:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.input-field::placeholder {
+  transition: color 0.3s ease;
+  outline: none;
+  overflow: hidden;
+}
+
+.input-field:focus ~ .input-label {
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+.terms-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.terms-link {
+  color: #374151;
+  text-decoration: underline;
+}
+
+.submit-group {
+  grid-column: span 6;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  direction: rtl;
+}
+
+.submit-button {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  border: 1px solid #f6e62b;
+  background-color: #f6e62b;
+  padding: 0.75rem 3rem;
+  margin-top: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.2s, color 0.2s;
+  direction: rtl;
+  font-family: "Tajawal";
+}
+
+.submit-button:hover {
+  background-color: transparent;
+  color: #f6e62b;
+}
+
+.login-text {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-family: "Tajawal";
+}
+
+.login-link {
+  color: #374151;
+  text-decoration: underline;
+  font-family: "Tajawal";
+}
+
+::placeholder {
+  font-size: 17px;
+  /* padding-right: -18px; */
+  font-family: "Tajawal";
+  /* transform: translateY(-5px); */
+}
+
+::-webkit-input-placeholder {
+  font-size: 17px;
+  /* padding-right: 18px; */
+  font-family: "Tajawal";
+  /* transform: translateY(-5px); */
+}
+
+::-moz-placeholder {
+  font-size: 17px;
+  /* padding-right: 18px; */
+  font-family: "Tajawal";
+  /* transform: translateY(-5px); */
+}
+
+:-ms-input-placeholder {
+  font-size: 17px;
+  /* padding-right: 18px; */
+  font-family: "Tajawal";
+  /* transform: translateY(-5px); */
+}
+
+:-moz-placeholder {
+  font-size: 17px;
+  /* padding-right: 18px; */
+  font-family: "Tajawal";
+  /* transform: translateY(-5px); */
+}

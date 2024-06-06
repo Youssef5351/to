@@ -1,0 +1,51 @@
+
+.soso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+.los {
+    font-family: "Tajawal";
+    font-weight: 600;
+    color:  #23dbdb;
+    font-size: 45px;
+}
+
+.sfir {
+    font-family: "Tajawal";
+    font-weight: 600;
+    color: black;
+    font-size: 45px;
+}
+
+.bouncy {
+    font-size: 75px;
+    position: absolute;
+    margin-top: -35px;
+    margin-right: 355px;
+    color: #23dbdb;
+}
+
+.atlas {
+    font-size: 45px;
+    margin-left: 370px;
+    margin-top: -33px;
+    color: #23dbdb;
+    position: absolute;
+}
+
+.right-side {
+    background-color: red;
+    height: 600px; 
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -600px;
+}
+
+.elkomi {
+    height: 115px;
+    border-radius: 200px;
+}

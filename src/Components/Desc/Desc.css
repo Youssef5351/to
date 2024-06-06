@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root[data-theme="light"] {
+    --beat-color: #384051;
+}
+
+:root[data-theme="dark"] {
+    --beat-color: #fff;
+}
+
+
+:root {
+    --default-transition : color .3s ease-in-out , background-color .3s ease-in-out, border-color .3s ease-in-out , fill .3s ease-in-out , transform .3s ease-in-out
+}
+
+
+.desc-section {
+    margin-top: 170px;
+    font-size: 18px;
+    color: #333;
+    padding: 20px;
+}
+
+.beat {
+    font-size: 91px;
+    color: var(--beat-color);
+    font-family: "Cairo";
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    transition: var(--default-transition);
+}
+
+.achi {
+    font-size: 70px;
+    color: #fb7185;
+    font-family: "Cairo";
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.go {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.ger {
+  background: black;
+  border: none;
+  font-family: 'Tajawal';
+  font-size: 17px;
+  cursor: pointer;
+  color: white;
+  padding: 12px 145px;
+  border-radius: 5px;
+  position: absolute;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.ger:hover {
+  background-color: #72f2c7;
+  color: black;
+}
+
+.happy {
+  display: block;
+  color: #fb7185;
+  position: absolute;
+  left: 150px;
+  top: 2130px;
+}
+.parent5 {
+  background-color:   #111827;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  margin-top: 11rem;
+  height: 310px;
+}
+
+.wrapper {
+  inset: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.bad {
+  filter: blur(64px);
+}
+
+.square {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.papa {
+  height: 295px;
+  width: 295px;
+  margin-left: 230px;
+  margin-top: 10px;
+}
+
+.doctorito {
+  font-family: "Tajawal";
+  color: white;
+  position: absolute;
+  bottom: 125px;
+  left: 57%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 20px;
+}
+
+.svg-element {
+  position: absolute;
+  bottom: 85px;
+  left: 43%;
+  z-index: -10;
+  height: 115px;
+  width: auto;
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.sig {
+  font-family: "Tajawal";
+  position: absolute;
+  font-weight: 300;
+  color: white;
+  bottom: 75px;
+  left: 40%;
+  /* z-index: -10; */
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clip {
+  clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);
+  aspect-ratio: 1097 / 1023;
+  width: 68.5625rem;
+  background-image: linear-gradient(to right,  #ff4694, #776fff); 
+  opacity: .25;
+  margin-top: -230px;
+}
+
+/* .right {
+  height: 245px;
+  display: block;
+  margin-left: 910px;
+  margin-top: 120px;
+  filter: hue-rotate(180deg) saturate(500%) brightness(0.8);
+}
+
+.left {
+  height: 250px;
+  margin-left: 475px;
+  transform: translateY(-277px);
+  filter: hue-rotate(180deg) saturate(500%) brightness(0.8);
+}
+
+.rev {
+  font-family: 'Cairo';
+  letter-spacing: 1px;
+  font-size: 24px;
+  display: flex;
+  transform: translateY(-425px);
+  justify-content: center;
+}
+
+strong {
+  font-family: "Cairo";
+}
+
+.hook {
+  height: 60px;
+  border: 4px solid white;
+  border-radius: 80px;
+  transform: translate(780px, -420px);
+}
+.angry {
+  height: 60px;
+  border: 4px solid white;
+  border-radius: 80px;
+  transform: translate(670px, -420px);
+}
+.third {
+  height: 60px;
+  border: 4px solid white;
+  border-radius: 80px;
+  transform: translate(565px, -420px);
+}
+.fourth {
+  height: 60px;
+  border: 4px solid white;
+  border-radius: 80px;
+  transform: translate(457px, -420px);
+} */
+
+.time {
+    /* background: -webkit-linear-gradient(16deg, #c952cc, #facc66); */
+    /* background: -webkit-linear-gradient(16deg, #c279c4, #2cc4f0); */
+    background: -webkit-linear-gradient(16deg, #529fcc, #66fa7a);
+    padding: 150px;
+    margin-top: 240px;
+    border-radius: 22px;
+}
+
+.word {
+    font-family: 'Cairo';
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(-115px);
+}
+
+.zillo {
+    color: white;
+    font-family: 'Cairo';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(-67px);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Tajawal';
+    background-color: transparent;
+}
+
+.loc {
+  font-family: "Tajawal";
+  background-color: #d1bf1e;
+  padding: 15px 85px;
+  font-size: 16px;
+  margin-left: 900px;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.loc:hover {
+  background-color: #decb20;
+}
+

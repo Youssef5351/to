@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
-
 :root[data-theme='light'] {
-    --page-bg: #fff;
+    --primary-color : black;
+    --page-bg: #f2f2f2;
     --muted-text: #B1B0B5;
     --switch-bg: #eee;
     --switch-circle-bg: #FFD371;
@@ -15,6 +15,7 @@
 }
 
 :root[data-theme='dark'] {
+    --primary-color: white;
     --page-bg: #000;
     --muted-text: #77757E;
     --switch-bg: #2D2C35;
@@ -29,79 +30,66 @@
     --default-transition : color .3s ease-in-out , background-color .3s ease-in-out, border-color .3s ease-in-out , fill .3s ease-in-out , transform .3s ease-in-out
 }
 
+body {
+    background-color: #f2f2f2;
+  }
+
 .navbar {
+    position: -webkit-sticky; /* For Safari معرفش ليه */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    z-index: 999;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    color: black;
+    padding-left: 0;
+    height: 0px;
+    border: 1px solid transparent;
     background-color: transparent;
-    padding: 15px 7%;
     transition: 0.6s;
+    padding: 65px 20px;
 }
 
-.logo{
-    height: 70px;
-    cursor: pointer;
-    transition: 0.8s;
-    margin-right: 150px;
-    border-radius: 400px;
+.navbar.scrolled {
+    background-color: #f2f2f2;
+    padding: 65px 20px;
 }
-ul{
-    display: flex; 
-    justify-content: flex-end;
-    flex: 1;
-    list-style: none;
-    text-align: center;
-
-}
-
-ul button {
-    font-family: "Tajawal";
-    color: white;
-    margin: 10px 24px;
-    font-size: 16px;
-    background-color: #4581e2/*b9bd32*/;
-    border-color: #4581e2;
-    border-radius: 5px;
-    padding: 10px 33px;
-    border: none;
-    transition:background-color 0.5s ease, border 0.5s ease;
-    position: relative;
-    box-sizing: border-box;
-    cursor: pointer;
-} 
-
-ul button:hover,
-ul button:focus
- {
+.logo { 
     background-color: transparent;
-    transition: .7s;
-    color: var(--hover-color);
-
-}
-
-ul button:hover::before,
-ul button:focus::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid /*#bd9e32*/#4581e2;
-    border-radius: 5px;
-    transition: border-color 0.3s ease; /* Add transition property for border */
-    pointer-events: none; /* Ensure this pseudo-element doesn't interfere with mouse events */
-    font-family: "Tajawal";
+    height: 85px;   
+    margin-left: 130px;
+    margin-top: 20px;
+    border-radius: 53px;
 }
 
 a {
-    cursor: default;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.signin {
+    font-family: "Cairo";
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: var(--primary-color);
+    transition: .3s ease-in-out;
+    margin-left: -360px;
+}
+
+.signin:hover {
+    border-color: #3571ae;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1); ;
+}
+
+h1 {
+    font-family: "Tajawal";
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+nav {
+    margin-top: 18px;
 }
 
 #theme-switcher {
@@ -111,11 +99,11 @@ a {
     align-items: center;
     gap: 1.63rem;
     cursor: pointer;
-    /* padding: .66rem; */
     height: 41px;
     width: 90px;
     position: relative;
     transition: var(--default-transition);
+    transform: translateX(-250px);
 }
 
 #theme-switcher::before {
@@ -139,12 +127,11 @@ a {
 #icon-sun {
     fill: var(--icon-sun);
     height: 21px;
+    background-color: transparent;
 }
 
 #icon-moon {
     fill: var(--icon-moon);
+    background-color: transparent;
     height: 22px;
 }
-
-
-
