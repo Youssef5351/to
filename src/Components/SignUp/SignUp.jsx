@@ -60,7 +60,7 @@ const SignUp = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/signup', formData);
+            const response = await axios.post('https://to-zeta.vercel.app/api/signup', formData);
             if (response.data.success) {
                 setSuccess('ok');
                 setError('');
