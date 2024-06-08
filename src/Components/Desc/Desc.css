@@ -5,15 +5,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
 :root[data-theme="light"] {
     --beat-color: #384051;
+    --button-background :#000;
+    --button-text :#fff;
+    --parent5-back: #111827;
+    --parent5-text: #fff;
 }
 
 :root[data-theme="dark"] {
     --beat-color: #fff;
-}
-
+    --button-background :#fff;
+    --button-text :#000;
+    --parent5-back: #ffffff;
+    --parent5-text: #000;
+  }
 
 :root {
     --default-transition : color .3s ease-in-out , background-color .3s ease-in-out, border-color .3s ease-in-out , fill .3s ease-in-out , transform .3s ease-in-out
@@ -54,12 +60,12 @@
 }
 
 .ger {
-  background: black;
+  background: var(--button-background);
   border: none;
   font-family: 'Tajawal';
   font-size: 17px;
   cursor: pointer;
-  color: white;
+  color: var(--button-text);
   padding: 12px 145px;
   border-radius: 5px;
   position: absolute;
@@ -68,7 +74,7 @@
 
 .ger:hover {
   background-color: #72f2c7;
-  color: black;
+  color: var(--button-background);
 }
 
 .happy {
@@ -79,7 +85,7 @@
   top: 2130px;
 }
 .parent5 {
-  background-color:   #111827;
+  background-color: var(--parent5-back);
   position: relative;
   z-index: 10;
   overflow: hidden;
@@ -112,7 +118,7 @@
 
 .doctorito {
   font-family: "Tajawal";
-  color: white;
+  color: var(--parent5-text);
   position: absolute;
   bottom: 125px;
   left: 57%;
@@ -135,7 +141,7 @@
   font-family: "Tajawal";
   position: absolute;
   font-weight: 300;
-  color: white;
+  color: var(--parent5-text);
   bottom: 75px;
   left: 40%;
   /* z-index: -10; */
@@ -148,92 +154,9 @@
   clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);
   aspect-ratio: 1097 / 1023;
   width: 68.5625rem;
-  background-image: linear-gradient(to right,  #ff4694, #776fff); 
+  background-image: linear-gradient(to right,  #ff4694, #fb7185); 
   opacity: .25;
   margin-top: -230px;
-}
-
-/* .right {
-  height: 245px;
-  display: block;
-  margin-left: 910px;
-  margin-top: 120px;
-  filter: hue-rotate(180deg) saturate(500%) brightness(0.8);
-}
-
-.left {
-  height: 250px;
-  margin-left: 475px;
-  transform: translateY(-277px);
-  filter: hue-rotate(180deg) saturate(500%) brightness(0.8);
-}
-
-.rev {
-  font-family: 'Cairo';
-  letter-spacing: 1px;
-  font-size: 24px;
-  display: flex;
-  transform: translateY(-425px);
-  justify-content: center;
-}
-
-strong {
-  font-family: "Cairo";
-}
-
-.hook {
-  height: 60px;
-  border: 4px solid white;
-  border-radius: 80px;
-  transform: translate(780px, -420px);
-}
-.angry {
-  height: 60px;
-  border: 4px solid white;
-  border-radius: 80px;
-  transform: translate(670px, -420px);
-}
-.third {
-  height: 60px;
-  border: 4px solid white;
-  border-radius: 80px;
-  transform: translate(565px, -420px);
-}
-.fourth {
-  height: 60px;
-  border: 4px solid white;
-  border-radius: 80px;
-  transform: translate(457px, -420px);
-} */
-
-.time {
-    /* background: -webkit-linear-gradient(16deg, #c952cc, #facc66); */
-    /* background: -webkit-linear-gradient(16deg, #c279c4, #2cc4f0); */
-    background: -webkit-linear-gradient(16deg, #529fcc, #66fa7a);
-    padding: 150px;
-    margin-top: 240px;
-    border-radius: 22px;
-}
-
-.word {
-    font-family: 'Cairo';
-    color: white;
-    font-size: 44px;
-    font-weight: 600;
-    display: flex;
-    justify-content: flex-end;
-    transform: translateY(-115px);
-}
-
-.zillo {
-    color: white;
-    font-family: 'Cairo';
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    transform: translateY(-67px);
 }
 
 a {
@@ -242,21 +165,3 @@ a {
     font-family: 'Tajawal';
     background-color: transparent;
 }
-
-.loc {
-  font-family: "Tajawal";
-  background-color: #d1bf1e;
-  padding: 15px 85px;
-  font-size: 16px;
-  margin-left: 900px;
-  border: none;
-  color: whitesmoke;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: .3s;
-}
-
-.loc:hover {
-  background-color: #decb20;
-}
-

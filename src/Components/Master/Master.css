@@ -5,6 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+:root[data-theme="light"] {    
+    --whr-text : #000;
+    --faq-quest : #fff;
+}
+:root[data-theme="dark"] {    
+    --whr-text : #fff;
+    --faq-quest :  #121929;
+}
 
 .space {
     margin-top: 170px;
@@ -42,7 +50,7 @@
 .whr {
     display: inline-block;
     opacity: 0;
-    color: #000;
+    color: var(--whr-text);
     font-family: 'Tajawal';
     font-size: 64px;
     margin-top: 35px;
@@ -88,7 +96,7 @@
 }
 
 .fro {
-    color: black;
+    color: var(--whr-text);
     font-family: "Cairo";
     font-weight: 700;
     font-size: 64px;
@@ -140,7 +148,7 @@
 }
   
 .faq-question {
-    background: #fff;
+    background: var(--faq-quest);
     padding-top: 520px;
     padding-left: 180px;
     border: 1px solid #2cc4f0;
@@ -170,6 +178,7 @@
     display: block;
     max-height: 200px;
     opacity: 1;
+    color: var(--whr-text);
   }
 
 .faq-item.active .faq-question {
@@ -198,20 +207,19 @@
     margin-top: -485px;
     transform: translateX(-70px);
     /* fill: #01eb01; */
-    fill: black;
+    fill: var(--whr-text);
 }
 
 .face {
     margin-top: -480px;
     transform: translateX(-80px);
-    /* fill: #00afff; */
-     fill: black; 
-    display: flex;
+    display:flex;
+    fill: var(--whr-text);
 }
 
 .mess {
     /* fill: #f91dff; */
-    fill: black;
+    fill: var(--whr-text);
     display: flex;
     margin-top: -480px;
     transform: translateX(-87px);

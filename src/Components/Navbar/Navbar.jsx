@@ -22,13 +22,17 @@ const Navbar = ({ theme, setTheme }) => {
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.getElementById("navbar");
+      const signinLinks = document.querySelectorAll(".signin");
+
       if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
+        signinLinks.forEach(link => link.classList.add("scrolled"));
       } else {
         navbar.classList.remove("scrolled");
+        signinLinks.forEach(link => link.classList.remove("scrolled"));
       }
     };
-
+    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -45,7 +49,7 @@ const Navbar = ({ theme, setTheme }) => {
         <a href="/">   
           <img src={logo} className="logo" />
         </a>  
-        <a href="/sign-up" className="signin">انشاء حساب</a>
+        <a href="/signup" className="signin">انشاء حساب</a>
         <a href="#About-Us" className="signin">معلومات عنا</a>
         <a href="#Location" className="signin"> الموقع</a>
         <div id="theme-switcher">

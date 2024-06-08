@@ -1,92 +1,92 @@
 :root[data-theme="light"] {
-    --primary-color : black;
+  --primary-color : black;
 }
 :root[data-theme="dark"] {
-    --primary-color : white;
+  --primary-color : white;
 }
 
 .parent {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 70px;
-    font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+  font-weight: 600;
 }
 
 .child {
-    font-family: "Tajawal";
-    font-size: 45px;
-    color: var(--primary-color);
+  font-family: "Tajawal";
+  font-size: 45px;
+  color: var(--primary-color);
 }
 
 .part {
-    font-family: "Tajawal";
-    font-size: 45px;
-    color: #fb7185;
+  font-family: "Tajawal";
+  font-size: 45px;
+  color: #fb7185;
 }
 
 .wrqa {
-    margin-left: -313px;
-    position: absolute;
-    color: #e2aa14;
+  margin-left: -313px;
+  position: absolute;
+  color: #e2aa14;
 }
 
 .ver {
-    height: 50px;
-    margin-left: 40px;
-    fill: #e2aa14;
+  height: 50px;
+  margin-left: 40px;
+  fill: #e2aa14;
 }
 /* ---------------------------------------------------------------------- */
 
 
 @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
   }
-  
-  .logos {
-    overflow: hidden;
-    padding: 60px 0;
-    background: white;
-    white-space: nowrap;
-    position: relative;
+  to {
+    transform: translateX(-100%);
   }
-  
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 150px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
-  
-  .logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:hover .logos-slide {
-    animation-play-state: paused;
-  }
-  
-  .logos-slide {
-    display: inline-block;
-    width: auto;
-    animation: 25s slide infinite linear;
-  }
-  
-  .logos-slide img {
-    height: 80px;
-    margin: 0 120px;
-    opacity: .6;
-  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  width: auto;
+  animation: 25s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 80px;
+  margin: 0 120px;
+  opacity: .6;
+}

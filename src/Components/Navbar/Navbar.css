@@ -12,6 +12,7 @@
     --icon-sun: #997F44;
     --icon-moon: var(--muted-text);
     --hover-color: #298db0;
+    --text-nav:#000;
 }
 
 :root[data-theme='dark'] {
@@ -24,6 +25,7 @@
     --icon-sun: var(--muted-text);
     --icon-moon: #DCE3FF;
     --hover-color: #6485a9;
+    --text-nav: #fff;
 }
 :root {
     --default-border-radius: 8px;
@@ -75,6 +77,18 @@ a {
     color: var(--primary-color);
     transition: .3s ease-in-out;
     margin-left: -360px;
+}
+
+.signin.scrolled {
+    color: var(--text-nav);
+}
+
+:root[data-theme='light'] .signin.scrolled {
+    color: black; /* Set color to black for light theme */
+}
+
+:root[data-theme='dark'] .signin.scrolled {
+    color: black; /* Set color to white for dark theme */
 }
 
 .signin:hover {

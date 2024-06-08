@@ -4,13 +4,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-
+require('dotenv').config();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://me-five-ebon.vercel.app'
+}));
 
 
-mongoose.connect('mongodb+srv://youssefelkoumi512:Youssefelkoumi1234@cluster0.1vamn99.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true, useUnifiedTopology: true
 });
 
 

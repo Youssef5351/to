@@ -1,7 +1,7 @@
-// import CrispChat from "./CrispChat";
+import CrispChat from "./CrispChat";
 
-// export const CrispProvider = () => {
-//   return <CrispChat />
-// };
+export const CrispProvider = () => {
+  return <CrispChat />
+};
 
-// export default CrispProvider;
+export default CrispProvider;
