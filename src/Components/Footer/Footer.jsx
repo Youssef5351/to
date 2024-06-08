@@ -61,15 +61,15 @@ const Footer = () => {
         <legend className='text'>اشترك دلوقتي واعمل حسابك عشان تعرف اخر التجديدات</legend>
         <legend className='text2'>هتلاقينا دايماً موجودين علي اي منصة من منصات التواصل الاجتماعي</legend>
         <legend className='text3'>وتقدر تزورنا في المجمع</legend>
-        <div className="input-group-full">
-    <label htmlFor="Email" className="input-label" style={{ transform: touched.email ? 'translateY(-110%)' : 'none' }}>
+        <div className="input-group-full1">
+    <label htmlFor="Email" className="input-label1" style={{ transform: touched.email ? 'translateY(-110%)' : 'none' }}>
         البريد الإلكتروني 
     </label>
     <input
         type="email"
         id="Email"
         name="email"
-        className="input-field"
+        className="input-field1"
         value={formData.email}
         onChange={handleChange}
         onFocus={() => setTouched({ ...touched, email: true })}

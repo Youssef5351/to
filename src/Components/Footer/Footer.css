@@ -36,18 +36,18 @@
     color: #000;
     margin-left: 322px;
 }
-.input-group-full {
+.input-group-full1 {
     display: flex;
     align-items: center;
     margin-top: 66px;
-    margin-left: 40px;
+    margin-left: 145px;
   }
   
-  .input-label {
+  .input-label1 {
     font-family: "Tajawal";
     font-weight: 300;
     direction: rtl;
-    margin-left: 408px;
+    margin-left: 300px;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -57,20 +57,20 @@
     transform-origin: top left
   }
   
-  .input-label.hidden {
+  .input-label1.hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none; /* Prevent pointer events on hidden labels */
   }
   
-  .input-field {
+  .input-field1 {
     margin-top: 0.25rem;
     width: 100%;
     font-family: "Tajawal";
     padding: 22px 0px;
     padding-left: 200px;
     border: none;
-    width: 307px;
+    width: 400px;
     border-bottom: 1px solid #868686;
     /* margin-left: 298px; */
     background-color: transparent;
@@ -84,28 +84,27 @@
     align-items: center;
   }
   
-  .input-field:focus {
+  .input-field1:focus {
     outline: none;
     overflow: hidden;
     border-bottom: 1px solid;
     background-color: transparent;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-bottom-color: #4985e0;
     border-image: linear-gradient(to right, #3ab0ff, #38caef);
     border-image-slice: 1;
   }
-  .input-field:hover {
+  .input-field1:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
   
-  .input-field::placeholder {
+  .input-field1::placeholder {
     transition: color 0.3s ease;
     outline: none;
     overflow: hidden;
   }
   
-  .input-field:focus ~ .input-label {
+  .input-field1:focus ~ .input-label1 {
     transition: 0.2s;
     font-size: 17px;
     color: #38caef;

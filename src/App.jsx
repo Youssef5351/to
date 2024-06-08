@@ -8,7 +8,9 @@ import CrispProvider from "./Components/Ui/CrispProvider";
 import Master from "./Components/Master/Master";
 import Infinite from "./Components/Infinite/Infinite";
 import SignUp from "./Components/SignUp/SignUp";
+
 import Location from "./Components/Location/Location";
+
 import Footer from "./Components/Footer/Footer";
 
 const App = () => {
@@ -32,7 +34,7 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
     </Router>

@@ -1,3 +1,5 @@
+
+
 *,
 *::before,
 *::after {
@@ -188,11 +190,11 @@ background-size: 100%;
 .input-label.hidden {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none; /* Prevent pointer events on hidden labels */
+  pointer-events: none; 
 }
 
 .ico {
-  color:#e0d332  /*#38caef*/;
+  color:#e0d332;
   font-size: 17px;
   margin-left: 17px;
   transform: translateX(-5px);
@@ -204,7 +206,7 @@ background-size: 100%;
   width: 100%;
   font-family: "Tajawal";
   padding: 22px 0px;
-  padding-left: 110px; 
+  padding-left: 110px;  
   border: none;
   border-bottom: 1px solid #868686;
   background-color: white;
@@ -298,35 +300,25 @@ background-size: 100%;
 
 ::placeholder {
   font-size: 17px;
-  /* padding-right: -18px; */
   font-family: "Tajawal";
-  /* transform: translateY(-5px); */
 }
 
 ::-webkit-input-placeholder {
   font-size: 17px;
-  /* padding-right: 18px; */
   font-family: "Tajawal";
-  /* transform: translateY(-5px); */
 }
 
 ::-moz-placeholder {
   font-size: 17px;
-  /* padding-right: 18px; */
   font-family: "Tajawal";
-  /* transform: translateY(-5px); */
 }
 
 :-ms-input-placeholder {
   font-size: 17px;
-  /* padding-right: 18px; */
   font-family: "Tajawal";
-  /* transform: translateY(-5px); */
 }
 
 :-moz-placeholder {
   font-size: 17px;
-  /* padding-right: 18px; */
   font-family: "Tajawal";
-  /* transform: translateY(-5px); */
-}
+}  

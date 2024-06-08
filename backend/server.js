@@ -8,7 +8,7 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://me-five-ebon.vercel.app'
+    origin: 'https://me-five-ebon.vercel.app'
 }));
 
 
