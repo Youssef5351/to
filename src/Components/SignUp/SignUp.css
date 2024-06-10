@@ -120,7 +120,7 @@
 
   }
 }
-.welcome-title::after {
+/* .welcome-title::after {
 content: '';
 position: absolute;
 width: 14.3%;
@@ -130,7 +130,7 @@ right: 2%;
 background: url(https://images.hitpaw.net/landing-pages/photo-enhancer/path.svg);
 background-repeat: no-repeat;
 background-size: 100%;
-}
+} */
 
 .welcome-description {
   margin-top: 1rem;
