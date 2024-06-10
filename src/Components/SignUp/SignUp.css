@@ -1,4 +1,17 @@
-
+:root[data-theme="light"] {
+  --background : #fff;
+  --welcome-desc : #6b7280;
+  --label : #747474;
+  --login-text : #6b7280;
+  --login-link : #374151;
+}
+:root[data-theme="dark"] {
+    --background : #111827;
+    --welcome-desc : #fff;
+    --label : #fff;
+    --login-text : #fff;
+    --login-link : #fff;
+}
 
 *,
 *::before,
@@ -58,11 +71,13 @@
   padding: 2rem;
   height: 100%;
   overflow-y: auto;
+  background-color : var(--background);
 }
 
 @media (min-width: 640px) {
   .main-content {
     padding: 3rem;
+    background-color : var(--background);
   }
 }
 
@@ -70,12 +85,14 @@
   .main-content {
     grid-column: span 7;
     padding: 4rem 4rem;
+    background-color : var(--background);
   }
 }
 
 @media (min-width: 1280px) {
   .main-content {
     grid-column: span 6;
+    background-color : var(--background);
   }
 }
 
@@ -135,7 +152,7 @@ background-size: 100%;
 .welcome-description {
   margin-top: 1rem;
   line-height: 1.75;
-  color: #6b7280;
+  color: var(--welcome-desc);
   direction: rtl;
   font-family: "Tajawal";
 }
@@ -182,7 +199,7 @@ background-size: 100%;
   cursor: auto;
   font-size: 1.10rem;
   position: absolute;
-  color: rgb(116, 116, 116);
+  color: var(--label);
   transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
   transform-origin: top left;
 }
@@ -209,7 +226,7 @@ background-size: 100%;
   padding-left: 110px;  
   border: none;
   border-bottom: 1px solid #868686;
-  background-color: white;
+  background-color: transparent;
   font-size: 1.10rem;
   height: 40px;
   color: #374151;
@@ -288,12 +305,12 @@ background-size: 100%;
 .login-text {
   margin-top: 1rem;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--login-text);
   font-family: "Tajawal";
 }
 
 .login-link {
-  color: #374151;
+  color: var(--login-link);
   text-decoration: underline;
   font-family: "Tajawal";
 }
