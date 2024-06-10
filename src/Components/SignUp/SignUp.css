@@ -4,6 +4,7 @@
   --label : #747474;
   --login-text : #6b7280;
   --login-link : #374151;
+  --typing : #374151;
 }
 :root[data-theme="dark"] {
     --background : #111827;
@@ -11,6 +12,7 @@
     --label : #fff;
     --login-text : #fff;
     --login-link : #fff;
+    --typing : #fff ;
 }
 
 *,
@@ -229,7 +231,7 @@ background-size: 100%;
   background-color: transparent;
   font-size: 1.10rem;
   height: 40px;
-  color: #374151;
+  color: var(--typing);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   direction: rtl;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease ,border-color 0.2s, padding-top 0.2s;
