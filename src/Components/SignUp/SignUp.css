@@ -239,7 +239,7 @@ background-size: 100%;
   outline: none;
   overflow: hidden;
   border-bottom: 1px solid;
-  background-color: #ffffff;
+  background-color: transparent;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-bottom-color: #4985e0;
   border-image: linear-gradient(to right, #3ab0ff, #38caef);
