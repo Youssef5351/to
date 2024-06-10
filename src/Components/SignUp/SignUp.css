@@ -83,13 +83,13 @@
   max-width: 20rem;
   max-height: 100vh;
   overflow-y: auto; 
-  margin-top: -215px;
+  margin-top: -160px;
 }
 
 @media (min-width: 1024px) {
   .content-container {
     max-width: 48rem;
-    margin-top: -215px;
+    margin-top: -160px;
   }
 }
 
@@ -141,7 +141,7 @@ background-size: 100%;
 }
 
 .form-container {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
