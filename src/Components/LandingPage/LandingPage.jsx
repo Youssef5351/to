@@ -1,21 +1,34 @@
-import React,{ useEffect } from "react";
+import React,{useEffect,useState} from "react";
 import { motion } from "framer-motion";
 import "./LandingPage.css";
 import elk from "../../assets/Elkoumi.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage = () => {
+    const [showPopUp, setShowPopUp] = useState(false);
+
     useEffect(() => {
-        const InjectCursorPositon = ({x , y}) => {
-          document.documentElement.style.setProperty('--x' , Math.round(x))
-          document.documentElement.style.setProperty('--y' , Math.round(y))
-        };
-        document.body.addEventListener('pointermove' , InjectCursorPositon)
-
-      }, []);
-
+      const registrationSuccess = localStorage.getItem('registrationSuccess');
+      if (registrationSuccess) {
+        setShowPopUp(true);
+        localStorage.removeItem('registrationSuccess');
+      }
+    }, []);
+  
+    const handleClosePopUp = () => {
+      setShowPopUp(false);
+    };
     return (
         <section className="landing">
-
+              {showPopUp && (
+        <div className="popup">
+          <div className="popup-content">
+            <p>! تم إنشاء الحساب بنجاح</p>
+            <button onClick={handleClosePopUp}><FontAwesomeIcon icon={faXmark} /></button>
+          </div>
+        </div>
+      )}
             <div className="greeting">
               أطمن علي صحتك
             </div>
