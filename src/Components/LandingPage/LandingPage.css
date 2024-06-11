@@ -96,9 +96,10 @@
     clip-path: inset(-20% 0);
     animation-name: text-reveal1, shimmy1;
     animation-duration: 0.65s;
-    animation-delay: .4s;
+    animation-delay: /*calc(0.5s + (1 + 2 * 0.65s / 3))*/ .4s;
     animation-fill-mode: both;
     animation-timing-function: steps(1), ease-out;
+    /* margin-left 60 */
 }
 
 @keyframes shimmy1 {
@@ -123,7 +124,7 @@
   background-color: #fb7185;
   animation-name: block-reveal;
   animation-duration: 0.65s;
-  animation-delay: .4s;
+  animation-delay: /*calc((1 + 2 * 0.65s / 3))*/ .4s;
   animation-fill-mode: both;
 } 
 
@@ -138,7 +139,7 @@
     clip-path: inset(-20% 0);
     animation-name: text-reveal2, shimmy2;
     animation-duration: 0.65s;
-    animation-delay: .6s;
+    animation-delay: /*calc(0.5s + (1 + 2 * 0.65s / 3))*/ .6s;
     animation-fill-mode: both;
     animation-timing-function: steps(1), ease-out;
     transition: var(--default-transition);
@@ -156,17 +157,17 @@
     color: transparent;
   }
   50%, 100% {
-    color: var(--primary-text);
+    color: black;
   }
 }
 .desc::after {
 content: "";
 position: absolute;
 inset: -20% 0;
-background-color:#fb7185;
+background-color: #fb7185;
 animation-name: block-reveal2;
 animation-duration: 0.65s;
-animation-delay: .6s;
+animation-delay: /*calc((1 + 2 * 0.65s / 3))*/ .6s;
 animation-fill-mode: both;
 }
 
@@ -194,6 +195,7 @@ animation-fill-mode: both;
     position: absolute;
     display: inline-block;
     color: white;
+    /* transform: translate(395px, 15px); */
     left: 385px;
     top: 535px; 
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -393,3 +395,37 @@ animation-fill-mode: both;
     justify-content: center;
 }
 
+
+.popup {
+  position: fixed;
+  border: none;
+  border-radius: 4px;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fed271;
+  padding: 21px 155px;
+  z-index: 2000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+  text-align: center;
+  position: relative;
+}
+
+.popup-content p {
+  margin-bottom: 6px;
+  font-family: 'Tajawal';
+}
+
+.popup-content button {
+  padding: 0px 1px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  align-content: stretch;
+  position: absolute;
+  margin-left: 185px;
+  margin-top: -24px;
+}
