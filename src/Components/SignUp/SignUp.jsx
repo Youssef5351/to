@@ -47,36 +47,37 @@ const SignUp = () => {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+   const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirmation_password) {
-            setError('الرجاء ملأ جميع الفراغات');
-            return;
-        }
+    if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirmation_password) {
+        setError('الرجاء ملأ جميع الفراغات');
+        return;
+    }
 
-        if (formData.password !== formData.confirmation_password) {
-            setError('كلمة المرور غير مطابقة');
-            return;
-        }
+    if (formData.password !== formData.confirmation_password) {
+        setError('كلمة المرور غير مطابقة');
+        return;
+    }
 
-        try {
-            const response = await axios.post('http://localhost:5000/api/signup', formData);
-            if (response.data.success) {
-                setError('');
-                localStorage.setItem('registrationSuccess', 'true');
-                navigate('/');
-            } else {
-                setError(response.data.message);
-            }
-        } catch (error) {
-            if (error.response.status === 400 && error.response.data.message === 'User already registered') {
-                setError('انت بالفعل تمتلك حساباً');
-            } else {
-                setError('لقد حدث خطأ رجاءً اعد المحاولة مرة اخري');
-            }
+    try {
+        const response = await axios.post('http://localhost:5000/api/signup', formData);
+        if (response.data.success) {
+            setError('');
+            localStorage.setItem('registrationSuccess', 'true');
+            navigate('/');
+        } else {
+            setError(response.data.message);
         }
-    };
+    } catch (error) {
+        if (error.response.status === 400 && error.response.data.message === 'User already registered') {
+            setError('انت بالفعل تمتلك حساباً');
+        } else {
+            setError('لقد حدث خطأ رجاءً اعد المحاولة مرة اخري');
+        }
+    }
+};
+
 
     return (
         <div className="sign-up">
