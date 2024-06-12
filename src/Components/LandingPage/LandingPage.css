@@ -8,7 +8,7 @@
     --main-text : #384051;
     --primary-text : #000;
     --border-color: #d1d3d6;
-
+    --desc-color : #000;
 
 }
 
@@ -16,6 +16,7 @@
     --main-text : #fff;
     --primary-text : #fff;
     --border-color: #36393f;
+    --desc-color : #fff;
 }
 
 
@@ -157,7 +158,7 @@
     color: transparent;
   }
   50%, 100% {
-    color: black;
+    color: var(--desc-color);
   }
 }
 .desc::after {
