@@ -3,38 +3,45 @@ import "./Navbar.css";
 import logo from "../../assets/Elkoumi.png";
 
 const Navbar = () => {
-  useEffect(() => {
+   useEffect(() => {
     const switchTheme = () => {
       const rootElem = document.documentElement;
       const bodyElem = document.body;
       let dataTheme = rootElem.getAttribute('data-theme');
       let newTheme = dataTheme === 'light' ? 'dark' : 'light';
       rootElem.setAttribute('data-theme', newTheme);
-      bodyElem.style.backgroundColor = newTheme === 'light' ? '#f2f2f2' : '#111827';
+      bodyElem.style.backgroundColor = newTheme === 'light' ? '#f2f2f2' : '#111827'; // Set background color accordingly
     };
 
-    const themeSwitcher = document.querySelector("#theme-switcher");
-    themeSwitcher.addEventListener('click', switchTheme);
+    document.querySelector("#theme-switcher").addEventListener('click', switchTheme);
     return () => {
-      themeSwitcher.removeEventListener('click', switchTheme);
+      document.querySelector("#theme-switcher").removeEventListener('click', switchTheme);
     };
   }, []);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.getElementById("navbar");
+      const signinLinks = document.querySelectorAll(".signin");
+
       if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
+        signinLinks.forEach(link => link.classList.add("scrolled"));
       } else {
         navbar.classList.remove("scrolled");
+        signinLinks.forEach(link => link.classList.remove("scrolled"));
       }
     };
-
+    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleMode = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
 
   return (
     <div id="navbar" className="navbar">
