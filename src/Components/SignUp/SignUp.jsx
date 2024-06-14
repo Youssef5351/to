@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './SignUp.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faHashtag, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faHashtag, faUserDoctor,faXmark } from '@fortawesome/free-solid-svg-icons';
 import rel from "../../assets/comu.jpg";
 import { useNavigate } from 'react-router-dom';
 
@@ -52,6 +52,7 @@ const SignUp = () => {
 
     if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirmation_password) {
         setError('الرجاء ملأ جميع الفراغات');
+        <FontAwesomeIcon icon={faXmark} />
         return;
     }
 
