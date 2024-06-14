@@ -350,15 +350,18 @@ background-size: 100%;
     border-radius: 6px;
     color: white;
     font-family: "Tajawal";
-    margin-top: 490px;
-    margin-left: 810px;
+/*     margin-top: 490px;
+    margin-left: 810px; */
+    top: 620px;
+    left: 810px;
     position: absolute;
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index:1000;
 }
 
 .error.show {
     opacity: 1;  /* Visible state */
-    transform: translateY(0);  /* Move element to original position */
+    transform: translateX(-50%) translateY(0);
 }
