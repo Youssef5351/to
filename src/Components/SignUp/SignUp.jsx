@@ -81,9 +81,7 @@ const SignUp = () => {
 
     return (
         <div className="sign-up">
-    <div className="error">
-        {error}
-    </div>
+            {error && <p className="error">{error}</p>}
             <form onSubmit={handleSubmit}>
                 <section className="section-bg-white">
                     <div className="grid-container">
