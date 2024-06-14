@@ -83,7 +83,7 @@ const SignUp = () => {
         <div className="sign-up">
             {error && (
                 <div className={`error ${error ? 'show' : ''}`}>
-                    <FontAwesomeIcon icon={faXmark} /> {error}
+                    <FontAwesomeIcon className="x" icon={faXmark} /> {error}
                 </div>
             )}
             <form onSubmit={handleSubmit}>
