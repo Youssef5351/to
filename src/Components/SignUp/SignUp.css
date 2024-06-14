@@ -353,4 +353,12 @@ background-size: 100%;
     margin-top: 490px;
     margin-left: 810px;
     position: absolute;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.error.show {
+    opacity: 1;  /* Visible state */
+    transform: translateY(0);  /* Move element to original position */
 }
