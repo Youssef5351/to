@@ -86,7 +86,6 @@ const SignUp = () => {
                                 <FontAwesomeIcon icon={faXmark} /> {error}
                             </div>
                             )}
-                        </div>
             <form onSubmit={handleSubmit}>
                 <section className="section-bg-white">
                     <div className="grid-container">
