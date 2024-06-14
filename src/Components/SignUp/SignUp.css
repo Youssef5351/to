@@ -365,3 +365,9 @@ background-size: 100%;
     opacity: 1;  /* Visible state */
     transform:translateY(0);
 }
+
+.x {
+    margin-left: -20px;
+    margin-top: 2px;
+    position: absolute;
+}
