@@ -52,7 +52,6 @@ const SignUp = () => {
 
     if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirmation_password) {
         setError('الرجاء ملأ جميع الفراغات');
-        <FontAwesomeIcon icon={faXmark} />
         return;
     }
 
@@ -82,7 +81,12 @@ const SignUp = () => {
 
     return (
         <div className="sign-up">
-            {error && <p className="error">{error}</p>}
+                        {error && (
+                            <div className={`error ${error ? 'show' : ''}`}>
+                                <FontAwesomeIcon icon={faXmark} /> {error}
+                            </div>
+                            )}
+                        </div>
             <form onSubmit={handleSubmit}>
                 <section className="section-bg-white">
                     <div className="grid-container">
