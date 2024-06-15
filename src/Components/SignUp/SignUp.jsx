@@ -81,8 +81,8 @@ const SignUp = () => {
 
     return (
         <div className="sign-up">     
-                <div className="error">
-                    <FontAwesomeIcon className="x" icon={faXmark} />{error}
+                <div className={`error ${error ? 'show' : ''}`}>
+                    <FontAwesomeIcon className="x" icon={faXmark} />
                 </div>
             <form onSubmit={handleSubmit}>
                 <section className="section-bg-white">
