@@ -80,8 +80,10 @@ const SignUp = () => {
 
 
     return (
-        <div className="sign-up">
-            {error && <p className="error">{error}</p>}
+        <div className="sign-up">     
+                <div className={`error ${error ? 'show' : ''}`}>
+                    <FontAwesomeIcon className="x" icon={faXmark} />
+                </div>
             <form onSubmit={handleSubmit}>
                 <section className="section-bg-white">
                     <div className="grid-container">
