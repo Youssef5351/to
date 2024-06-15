@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './SignUp.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faHashtag, faUserDoctor,faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faHashtag, faUserDoctor} from '@fortawesome/free-solid-svg-icons';
 import rel from "../../assets/comu.jpg";
 import { useNavigate } from 'react-router-dom';
 
@@ -81,9 +81,7 @@ const SignUp = () => {
 
     return (
         <div className="sign-up">     
-                <div className={`error ${error ? 'show' : ''}`}>
-                    <FontAwesomeIcon className="x" icon={faXmark} />
-                </div>
+     {error && <p className="error">{error}</p>}
             <form onSubmit={handleSubmit}>
                 <section className="section-bg-white">
                     <div className="grid-container">
