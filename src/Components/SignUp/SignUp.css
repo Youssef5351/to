@@ -354,14 +354,12 @@ background-size: 100%;
     left: 810px;
     position: absolute;
     opacity: 0;
-     transform: translateX(-50%);
     transition: opacity 0.5s ease, transform 0.5s ease;
     z-index:1000;
 }
 
 .error.show {
     opacity: 1; 
-    transform:translateY(0);
 }
 
 .x {
