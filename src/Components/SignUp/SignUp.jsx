@@ -103,6 +103,7 @@ const SignUp = () => {
                                             id="LastName"
                                             name="last_name"
                                             className="input-field"
+                                            required
                                             value={formData.last_name}
                                             onChange={handleChange}
                                             onFocus={() => setTouched({ ...touched, last_name: true })}
@@ -124,6 +125,7 @@ const SignUp = () => {
                                             name="first_name"
                                             className="input-field"
                                             value={formData.first_name}
+                                            required
                                             onChange={handleChange}
                                             onFocus={() => setTouched({ ...touched, first_name: true })}
                                             onBlur={(e) => {
@@ -144,6 +146,7 @@ const SignUp = () => {
                                             name="email"
                                             className="input-field"
                                             value={formData.email}
+                                            required
                                             onChange={handleChange}
                                             onFocus={() => setTouched({ ...touched, email: true })}
                                             onBlur={(e) => {
@@ -163,6 +166,7 @@ const SignUp = () => {
                                             id="PasswordConfirmation"
                                             name="confirmation_password"
                                             className="input-field"
+                                            required
                                             value={formData.confirmation_password}
                                             onChange={handleChange}
                                             onFocus={() => setTouched({ ...touched, confirmation_password: true })}
@@ -184,6 +188,7 @@ const SignUp = () => {
                                             name="password"
                                             className="input-field"
                                             value={formData.password}
+                                            required
                                             onChange={handleChange}
                                             onFocus={() => setTouched({ ...touched, password: true })}
                                             onBlur={(e) => {
