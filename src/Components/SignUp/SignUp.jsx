@@ -49,7 +49,7 @@ const SignUp = () => {
         });
     };
 
-   const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.confirmation_password) {
@@ -62,7 +62,7 @@ const SignUp = () => {
         return;
     }
 
-       setLoading(true);
+    setLoading(true);
 
     try {
         const response = await axios.post('https://to-zeta.vercel.app/api/signup', formData);
@@ -74,14 +74,13 @@ const SignUp = () => {
             setError(response.data.message);
         }
     } catch (error) {
-        if (error.response.status === 400 && error.response.data.message === 'User already registered') {
+        if (error.response && error.response.status === 400 && error.response.data.message === 'User already registered') {
             setError('انت بالفعل تمتلك حساباً');
         } else {
             setError('لقد حدث خطأ رجاءً اعد المحاولة مرة اخري');
         }
-                } finally {
-            setLoading(false);
-        }
+    } finally {
+        setLoading(false);
     }
 };
 
