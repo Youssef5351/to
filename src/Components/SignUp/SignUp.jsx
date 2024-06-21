@@ -24,6 +24,8 @@ const SignUp = () => {
         confirmation_password: false
     });
 
+    const [loading, setLoading] = useState(false);
+
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -60,6 +62,8 @@ const SignUp = () => {
         return;
     }
 
+       setLoading(true);
+
     try {
         const response = await axios.post('https://to-zeta.vercel.app/api/signup', formData);
         if (response.data.success) {
@@ -74,6 +78,9 @@ const SignUp = () => {
             setError('انت بالفعل تمتلك حساباً');
         } else {
             setError('لقد حدث خطأ رجاءً اعد المحاولة مرة اخري');
+        }
+                } finally {
+            setLoading(false);
         }
     }
 };
@@ -199,7 +206,9 @@ const SignUp = () => {
                                         />
                                     </div>
                                     <div className="submit-group">
-                                        <button className="submit-button">أنشئ حسابك !</button>
+                                        <button className="submit-button" type="submit" disabled={loading}>
+                                            {loading ? 'يتم الأن تسجيل حسابك...' : 'أنشئ حسابك !'}
+                                        </button>
                                         <p className="login-text">عندك حساب؟
                                             <a href="#" className="login-link">تسجبل دخول</a>.
                                         </p>
