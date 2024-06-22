@@ -188,3 +188,16 @@ nav {
     margin-left: 185px;
     margin-top: -24px;
   }
+
+.user-icon {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.iconic {
+    font-size: 40px;
+    margin-left: 50px;
+    color: #837829;
+    transform: translateX(-60px);
+}
