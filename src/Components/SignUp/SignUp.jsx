@@ -6,7 +6,7 @@ import { faAt, faHashtag, faUserDoctor} from '@fortawesome/free-solid-svg-icons'
 import rel from "../../assets/comu.jpg";
 import { useNavigate } from 'react-router-dom';
 
-const SignUp = () => {
+const SignUp = ({ setIsAuthenticated }) => {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',
@@ -68,7 +68,8 @@ const handleSubmit = async (e) => {
         const response = await axios.post('https://to-zeta.vercel.app/api/signup', formData);
         if (response.data.success) {
             setError('');
-            localStorage.setItem('registrationSuccess', 'true');
+            localStorage.setItem('isAuthenticated', 'true');
+            setIsAuthenticated(true);
             navigate('/');
         } else {
             setError(response.data.message);
