@@ -76,6 +76,11 @@ a {
     border-radius: 6px;
     color: var(--primary-color);
     transition: .3s ease-in-out;
+    margin-left: -250px;
+}
+
+.signin.authenticated {
+  margin-left : 0;
 }
 
 .signin.scrolled {
@@ -83,11 +88,11 @@ a {
 }
 
 :root[data-theme='light'] .signin.scrolled {
-    color: black; /* Set color to black for light theme */
+    color: black;
 }
 
 :root[data-theme='dark'] .signin.scrolled {
-    color: black; /* Set color to white for dark theme */
+    color: black;
 }
 
 .signin:hover {
@@ -116,7 +121,11 @@ nav {
     width: 90px;
     position: relative;
     transition: var(--default-transition);
-    transform: translateX(20px);
+    transform: translate(-235px);
+}
+
+#theme-switcher.authenticated {
+  transform: translate(20px);
 }
 
 #theme-switcher::before {
