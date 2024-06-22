@@ -43,7 +43,7 @@
 
 // export default App;
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import LandingPage from "./Components/LandingPage/LandingPage";
