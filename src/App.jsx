@@ -58,10 +58,19 @@ import Footer from "./Components/Footer/Footer";
 
 
 const App = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    // Check local storage or cookies for authentication state
+    const authState = localStorage.getItem('isAuthenticated');
+    if (authState) {
+      setIsAuthenticated(true);
+    }
+  }, []);
   return (
     <Router>
       <div>
-        <Navbar />
+        <Navbar isAuthenticated={isAuthenticated}/>
         <Routes>
           <Route
             path="/"
@@ -79,7 +88,7 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-up" element={<SignUp setIsAuthenticated={setIsAuthenticated}/>} />
         </Routes>
       </div>
     </Router>
