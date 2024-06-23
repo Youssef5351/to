@@ -255,3 +255,8 @@ nav {
 .user-icon.clicked .dropdown-menu {
     display: block; /* Show dropdown when .clicked class is applied to .user-icon */
 }
+.user-icon:hover .dropdown-menu,
+.user-icon:focus .dropdown-menu,
+.user-icon .dropdown-menu:focus {
+  display: block;
+}
