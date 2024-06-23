@@ -211,21 +211,18 @@ nav {
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 8px 0;
-  z-index: 10;
-  display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* Adjust as necessary */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    z-index: 10;
+    display: none; /* Initially hide the dropdown */
 }
 
-.dropdown-menu.show {
-  display: block;
-}
 
 .dropdown-menu li {
   list-style-type: none;
