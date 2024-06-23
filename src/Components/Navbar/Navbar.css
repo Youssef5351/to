@@ -210,39 +210,6 @@ nav {
     transform: translateX(-60px);
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 8px 0;
-  z-index: 10;
-}
-
-.dropdown-menu li {
-  list-style-type: none;
-  padding: 8px 16px;
-}
-
-.dropdown-menu li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.dropdown-menu li a:hover {
-  color: #555;
-}
-
-.dropdown-menu li button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-}
-
 .dropdown-menu li button:hover {
   color: #555;
 }
