@@ -223,9 +223,7 @@ nav {
   display: none;
 }
 
-.user-icon:hover .dropdown-menu,
-.user-icon:focus .dropdown-menu,
-.user-icon .dropdown-menu:focus {
+.dropdown-menu.show {
   display: block;
 }
 
