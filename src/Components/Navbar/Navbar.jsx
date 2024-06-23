@@ -44,6 +44,18 @@ const Navbar = ({ isAuthenticated }) => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+   const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAuthenticated");
+    window.location.href = "/";
+  };
+
+
   return (
     <div id="navbar" className="navbar">
       <a href="/">
@@ -60,10 +72,18 @@ const Navbar = ({ isAuthenticated }) => {
           <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
         </svg>
       </div>
-        {isAuthenticated && (
-        <button className="user-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" className="iconic" width="0.97em" height="1em" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248s248-111 248-248S385 8 248 8m0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88s-88-39.4-88-88s39.4-88 88-88m0 344c-58.7 0-111.3-26.6-146.5-68.2c18.8-35.4 55.6-59.8 98.5-59.8c2.4 0 4.8.4 7.1 1.1c13 4.2 26.6 6.9 40.9 6.9c14.3 0 28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1c42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448"></path></svg>
-        </button>
+{isAuthenticated && (
+        <div className="user-icon" onClick={toggleDropdown}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="iconic" width="0.97em" height="1em" viewBox="0 0 496 512">
+            <path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248s248-111 248-248S385 8 248 8m0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88s-88-39.4-88-88s39.4-88 88-88m0 344c-58.7 0-111.3-26.6-146.5-68.2c18.8-35.4 55.6-59.8 98.5-59.8c2.4 0 4.8.4 7.1 1.1c13 4.2 26.6 6.9 40.9 6.9c14.3 0 28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1c42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448"></path>
+          </svg>
+          {showDropdown && (
+            <ul className="dropdown-menu">
+              <li><a href="/profile">الملف الشخصي</a></li>
+              <li><button onClick={handleLogout}>تسجيل الخروج</button></li>
+            </ul>
+          )}
+        </div>
       )}
     </div>
   );
