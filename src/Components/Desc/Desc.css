@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root[data-theme="light"] {
+    --beat-color: #384051;
+    --button-background :#000;
+    --button-text :#fff;
+    --parent5-back: #111827;
+    --parent5-text: #fff;
+}
+
+:root[data-theme="dark"] {
+    --beat-color: #fff;
+    --button-background :#fff;
+    --button-text :#000;
+    --parent5-back: #ffffff;
+    --parent5-text: #000;
+  }
+
+:root {
+    --default-transition : color .3s ease-in-out , background-color .3s ease-in-out, border-color .3s ease-in-out , fill .3s ease-in-out , transform .3s ease-in-out
+}
+
+
+.desc-section {
+    margin-top: 170px;
+    font-size: 18px;
+    color: #333;
+    padding: 20px;
+}
+
+.beat {
+    font-size: 91px;
+    color: var(--beat-color);
+    font-family: "Cairo";
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    transition: var(--default-transition);
+}
+
+.achi {
+    font-size: 70px;
+    color: #fb7185;
+    font-family: "Cairo";
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.go {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.ger {
+  background: var(--button-background);
+  border: none;
+  font-family: 'Tajawal';
+  font-size: 17px;
+  cursor: pointer;
+  color: var(--button-text);
+  padding: 12px 145px;
+  border-radius: 5px;
+  position: absolute;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.ger:hover {
+  background-color: #72f2c7;
+  color: var(--button-background);
+}
+
+.happy {
+  display: block;
+  color: #fb7185;
+  position: absolute;
+  left: 150px;
+  top: 2130px;
+}
+.parent5 {
+  background-color: var(--parent5-back);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  margin-top: 11rem;
+  height: 310px;
+}
+
+.wrapper {
+  inset: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.bad {
+  filter: blur(64px);
+}
+
+.square {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.papa {
+  height: 295px;
+  width: 295px;
+  margin-left: 230px;
+  margin-top: 10px;
+}
+
+.doctorito {
+  font-family: "Tajawal";
+  color: var(--parent5-text);
+  position: absolute;
+  bottom: 125px;
+  left: 57%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 20px;
+}
+
+.svg-element {
+  position: absolute;
+  bottom: 85px;
+  left: 43%;
+  z-index: -10;
+  height: 115px;
+  width: auto;
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.sig {
+  font-family: "Tajawal";
+  position: absolute;
+  font-weight: 300;
+  color: var(--parent5-text);
+  bottom: 75px;
+  left: 40%;
+  /* z-index: -10; */
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clip {
+  clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);
+  aspect-ratio: 1097 / 1023;
+  width: 68.5625rem;
+  background-image: linear-gradient(to right,  #ff4694, #fb7185); 
+  opacity: .25;
+  margin-top: -230px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Tajawal';
+    background-color: transparent;
+}
