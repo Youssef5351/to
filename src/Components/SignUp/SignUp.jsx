@@ -223,8 +223,5 @@ const handleSubmit = async (e) => {
     );
 };
 
-<<<<<<< HEAD
 export default SignUp;
-=======
-export default SignUp;
->>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
+

@@ -261,17 +261,11 @@ nav {
 }
 
 .users {
-<<<<<<< HEAD
+
     color: #34d3d3;
     font-size: 20px;
     margin-top: 2px;
     position: absolute;
-=======
-                color: #34d3d3;
-                font-size: 20px;
-                margin-top: 2px;
-                position: absolute;
->>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
 }
 
 .outing {
@@ -279,8 +273,4 @@ nav {
     font-size: 23px;
     margin-top: 1px;
     position: absolute;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
