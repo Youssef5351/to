@@ -259,3 +259,17 @@ nav {
 .user-icon .dropdown-menu:focus {
   display: block;
 }
+
+.users {
+                color: #34d3d3;
+                font-size: 20px;
+                margin-top: 2px;
+                position: absolute;
+}
+
+.outing {
+    color: #34d3d3;
+    font-size: 23px;
+    margin-top: 1px;
+    position: absolute;
+}
