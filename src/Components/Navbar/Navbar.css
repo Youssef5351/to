@@ -209,7 +209,3 @@ nav {
     color: #837829;
     transform: translateX(-60px);
 }
-
-.dropdown-menu li button:hover {
-  color: #555;
-}
