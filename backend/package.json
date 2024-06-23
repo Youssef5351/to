@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< HEAD
+=======
+  "engines" : {
+    "node" : "20.10.0"
+  },
+>>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +18,10 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+<<<<<<< HEAD
+=======
+    "dotenv": "^16.4.5",
+>>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
     "express": "^4.19.2",
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.1"

@@ -114,4 +114,8 @@ export default App;
 //   );
 // };
 
+<<<<<<< HEAD
 // export default App;
+=======
+// export default App;
+>>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6

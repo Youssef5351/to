@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
 import React, { useState ,useRef , useEffect } from "react";
 import "./Master.css";
 import kom from "../../assets/iphone.png";
@@ -123,4 +126,8 @@ const Master = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Master;
+=======
+export default Master;
+>>>>>>> 9cf04d45a7dab74a57ab13b91de5d27c1f0701a6
