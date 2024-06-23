@@ -223,6 +223,11 @@ nav {
   display: none;
 }
 
+.user-icon:focus .dropdown-menu,
+.user-icon .dropdown-menu:focus {
+  display: block;
+}
+
 
 .dropdown-menu li {
   list-style-type: none;
