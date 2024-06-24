@@ -212,18 +212,19 @@ nav {
 
 .dropdown-menu {
     position: absolute;
-    top: calc(70% + 5px); /* Adjust as necessary */
+    top: calc(70% + 5px);
     right: 60px;
     background-color: #fbfbfb;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 8px 30px;
+    padding: 20px 35px;
     z-index: 10;
-    display: none; /* Initially hide the dropdown */
+    display: none; 
 }
 
 .dropdown-menu.show {
-    display: block; /* Show dropdown when .show class is applied */
+    display: block; 
+
 }
 
 .dropdown-menu li {
@@ -258,6 +259,7 @@ nav {
 .user-icon:focus .dropdown-menu,
 .user-icon .dropdown-menu:focus {
   display: block;
+  
 }
 
 .users {
