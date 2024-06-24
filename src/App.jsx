@@ -10,6 +10,7 @@ import Infinite from "./Components/Infinite/Infinite";
 import SignUp from "./Components/SignUp/SignUp";
 import Location from "./Components/Location/Location";
 import Footer from "./Components/Footer/Footer";
+import Login from "./Components/Login/Login";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -52,6 +53,15 @@ const App = () => {
                 <SignUp setIsAuthenticated={setIsAuthenticated} />
               </>
             }
+          />
+          <Route
+          path="/sign-in"
+          element= {
+            <>
+              <Navbar isAuthenticated={isAuthenticated} />
+              <Login setIsAuthenticated={setIsAuthenticated} />
+            </>
+          }
           />
         </Routes>
       </div>
