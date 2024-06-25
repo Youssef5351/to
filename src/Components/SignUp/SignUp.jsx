@@ -210,7 +210,7 @@ const handleSubmit = async (e) => {
                                             {loading ? 'يتم الأن تسجيل حسابك...' : 'أنشئ حسابك !'}
                                         </button>
                                         <p className="login-text">عندك حساب؟
-                                            <a href="#" className="login-link">تسجبل دخول</a>.
+                                            <a href="/sign-in" className="login-link">تسجبل دخول</a>.
                                         </p>
                                     </div>
                                 </div>
