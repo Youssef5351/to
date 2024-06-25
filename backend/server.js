@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://youssefelkoumi512:Youssefelkoumi1234@cluster0.1v
 
 const userSchema = new mongoose.Schema({
   first_name: { type: String, required: true },
-  last_name: { type: String, required: true, unique: true },
+  last_name: { type: String, required: true},
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 });
