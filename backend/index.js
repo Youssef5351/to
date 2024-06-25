@@ -10,8 +10,13 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://elkoumi-clinics1-eta.vercel.app'
+  origin: 'https://elkoumi-clinics1-eta.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+  optionsSuccessStatus: 204
 }));
+
+app.options('*', cors());
 
 mongoose.connect('mongodb+srv://youssefelkoumi512:Youssefelkoumi1234@cluster0.1vamn99.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
