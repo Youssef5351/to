@@ -47,7 +47,7 @@ const Login = ({ setIsAuthenticated }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/login', formData, {
+            const response = await axios.post('https://to-zeta.vercel.app/api/login', formData, {
             });
             if (response.data.success) {
                 setError('');
