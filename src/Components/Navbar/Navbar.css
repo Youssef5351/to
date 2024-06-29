@@ -217,7 +217,7 @@ nav {
     background-color: #fbfbfb;
     border-radius: 17px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 34px 41px;
+    padding: 28px 41px;
     z-index: 10;
     display: none; 
 }
@@ -267,7 +267,6 @@ nav {
     height: 1px;
     border: none;
     transform: translateX(10px);
-    margin-top: 9px;
 }
 
 .users {
