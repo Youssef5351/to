@@ -29,9 +29,9 @@ const LandingPage = () => {
           </div>
         </div>
       )}
-            <div className="greeting">
+            <h1 className="greeting">
               أطمن علي صحتك
-            </div>
+            </h1>
             <span className="hest">
                 معانا صحتك هتبقي تمام
             </span>
